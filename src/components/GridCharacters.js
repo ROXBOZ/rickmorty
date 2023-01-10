@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Typography } from "@mui/material";
-import { Button } from "@mui/material";
-import Dashboard from "./Dashboard";
+import SimpleModal from "./SimpleModal";
 
 const GridCharacters = () => {
   // fetch data
@@ -19,11 +18,6 @@ const GridCharacters = () => {
         console.log("error: ", error);
       });
   }, []);
-  // Handle Modal
-
-  const handleModal = () => {
-    console.log("yolo");
-  };
 
   return (
     <div className="character-grid-container">
@@ -38,9 +32,7 @@ const GridCharacters = () => {
                 <div className="flip-card-back">
                   <div className="flip-card-back-content">
                     <Typography>{d.name}</Typography>
-                    <Button variant="contained" onClick={handleModal}>
-                      learn more
-                    </Button>
+                    <SimpleModal />
                   </div>
                 </div>
               </div>

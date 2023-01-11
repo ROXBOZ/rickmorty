@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Typography } from "@mui/material";
 
 const Search = ({ data, setFilter }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -16,13 +17,13 @@ const Search = ({ data, setFilter }) => {
 
   return (
     <div className="search-bar">
-      Search:
+      <Typography>Search: </Typography>
       <input
         onChange={(e) => {
           handleChange(e);
         }}
         type="text"
-        placeholder="Search..."
+        placeholder="Rick..."
       />
     </div>
   );

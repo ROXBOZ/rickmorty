@@ -14,7 +14,6 @@ function App() {
       })
       .then((result) => {
         setData(result.results);
-        console.log("data", data);
       })
       .catch((error) => {
         console.log("error: ", error);

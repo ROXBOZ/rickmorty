@@ -97,8 +97,10 @@
   width: 15%;
   margin: auto;
   text-align: center;
+  cursor: pointer;
 }
 .navbar .search-bar {
+  display: flex;
   margin: 1rem auto;
   color: white;
 }

@@ -1,7 +1,11 @@
 @import "vars";
 @import "character-grid";
+@import "simple-modal";
+@import "navbar";
 
-.App {
-  margin: auto;
-  max-width: 80%;
+html {
+  background-color: $main;
+  body {
+    margin: 0;
+  }
 }

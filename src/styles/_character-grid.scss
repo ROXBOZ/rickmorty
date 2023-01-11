@@ -1,15 +1,20 @@
 .character-grid-container {
+  max-width: 80%;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 2rem;
 
   .flip-card {
     background-color: transparent;
-    height: 190px;
+    height: 200px; // TO BE FIXED
     perspective: 1000px;
     border-radius: 0.5rem;
     overflow: hidden;
     &:hover {
+      z-index: 1;
+      box-shadow: 0 0 60px 30px white, 0 0 100px 60px $secondary,
+        0 0 140px 90px cyan;
       .flip-card-inner {
         transform: rotateY(180deg);
       }
@@ -46,8 +51,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: black;
-      color: white;
+      background-color: white;
+      color: black;
       transform: rotateY(180deg);
     }
   }

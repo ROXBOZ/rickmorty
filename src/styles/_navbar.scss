@@ -1,0 +1,12 @@
+.navbar {
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-items: center;
+  background-color: $main-secondary;
+  .navbar-logo {
+    width: 15%;
+    margin: auto;
+    text-align: center;
+  }
+}

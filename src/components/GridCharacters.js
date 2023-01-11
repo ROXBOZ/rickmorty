@@ -32,7 +32,7 @@ const GridCharacters = () => {
                 <div className="flip-card-back">
                   <div className="flip-card-back-content">
                     <Typography gutterBottom>{d.name}</Typography>
-                    <SimpleModal />
+                    <SimpleModal data={(data, d)} />
                   </div>
                 </div>
               </div>

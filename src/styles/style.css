@@ -1,14 +1,20 @@
 .character-grid-container {
+  max-width: 80%;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 2rem;
 }
 .character-grid-container .flip-card {
   background-color: transparent;
-  height: 190px;
+  height: 200px;
   perspective: 1000px;
   border-radius: 0.5rem;
   overflow: hidden;
+}
+.character-grid-container .flip-card:hover {
+  z-index: 1;
+  box-shadow: 0 0 60px 30px white, 0 0 100px 60px #bdffa6, 0 0 140px 90px cyan;
 }
 .character-grid-container .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
@@ -45,12 +51,55 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   transform: rotateY(180deg);
 }
 
-.App {
+.modal-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  color: white;
+  padding: 3rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+.modal-box .modal-box-closebutton {
+  top: 1rem;
+  right: 1rem;
+  position: absolute;
+  color: white;
+}
+.modal-box .modal-box-closebutton:hover {
+  opacity: 80%;
+}
+.modal-box .modal-box-img {
+  max-width: 70%;
+  margin: 0 auto 1rem;
+  border-radius: 0.5rem;
+}
+
+.navbar {
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-items: center;
+  background-color: #0a3b61;
+}
+.navbar .navbar-logo {
+  width: 15%;
   margin: auto;
-  max-width: 80%;
+  text-align: center;
+}
+
+html {
+  background-color: rgb(5, 31, 51);
+}
+html body {
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */

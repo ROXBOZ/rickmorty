@@ -61,19 +61,20 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   padding: 3rem;
   border-radius: 0.5rem;
   display: flex;
   align-content: center;
   flex-direction: column;
+  box-shadow: 0 0 60px 30px white, 0 0 100px 60px #bdffa6, 0 0 140px 90px cyan;
 }
 .modal-box .modal-box-closebutton {
   top: 1rem;
   right: 1rem;
   position: absolute;
-  color: white;
+  color: black;
 }
 .modal-box .modal-box-closebutton:hover {
   opacity: 80%;
@@ -88,17 +89,25 @@
   padding: 1rem 0;
   margin-bottom: 2rem;
   display: flex;
+  flex-direction: column;
   justify-items: center;
-  background-color: #0a3b61;
+  background-color: #092843;
 }
 .navbar .navbar-logo {
   width: 15%;
   margin: auto;
   text-align: center;
 }
+.navbar .search-bar {
+  margin: 1rem auto;
+  color: white;
+}
+.navbar .search-bar input {
+  margin-left: 0.5rem;
+}
 
 html {
-  background-color: rgb(5, 31, 51);
+  background-color: rgb(3, 13, 22);
 }
 html body {
   margin: 0;

@@ -11,8 +11,8 @@ const SimpleModal = ({ data, d }) => {
 
   return (
     <React.Fragment>
-      <Button variant="contained" onClick={handleOpen}>
-        Open modal
+      <Button color="secondary" variant="contained" onClick={handleOpen}>
+        More Info
       </Button>
       <Modal open={open} onClose={handleClose}>
         <Box className="modal-box">

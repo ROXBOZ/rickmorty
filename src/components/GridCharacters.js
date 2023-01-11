@@ -1,24 +1,7 @@
-import { useEffect, useState } from "react";
 import { Typography } from "@mui/material";
 import SimpleModal from "./SimpleModal";
 
-const GridCharacters = () => {
-  // fetch data
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    fetch("https://rickandmortyapi.com/api/character/")
-      .then((response) => {
-        return response.json();
-      })
-      .then((result) => {
-        setData(result.results);
-        console.log("data", data);
-      })
-      .catch((error) => {
-        console.log("error: ", error);
-      });
-  }, []);
-
+const GridCharacters = ({ data, d }) => {
   return (
     <div className="character-grid-container">
       {data &&

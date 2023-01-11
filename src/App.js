@@ -6,6 +6,7 @@ import { useEffect } from "react";
 function App() {
   // fetch data
   const [data, setData] = useState([]);
+  const [filter, setFilter] = useState(null);
   useEffect(() => {
     fetch("https://rickandmortyapi.com/api/character/")
       .then((response) => {
@@ -22,8 +23,8 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar data={data} />
-      <GridCharacters data={data} />
+      <NavBar data={data} setFilter={setFilter} />
+      <GridCharacters data={data} filter={filter} />
     </div>
   );
 }

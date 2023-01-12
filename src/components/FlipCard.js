@@ -2,17 +2,17 @@ import React from "react";
 import { Typography } from "@mui/material";
 import SimpleModal from "./SimpleModal";
 
-const FlipCard = ({ data }) => {
+const FlipCard = ({ d }) => {
   return (
-    <div key={data.id} className="flip-card">
+    <div key={d.id} className="flip-card">
       <div className="flip-card-inner">
         <div className="flip-card-front">
-          <img src={data.image} alt={data.name} />
+          <img src={d.image} alt={d.name} />
         </div>
         <div className="flip-card-back">
           <div className="flip-card-back-content">
-            <Typography gutterBottom>{data.name}</Typography>
-            <SimpleModal data={data} />
+            <Typography gutterBottom>{d.name}</Typography>
+            <SimpleModal data={d} />
           </div>
         </div>
       </div>

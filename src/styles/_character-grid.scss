@@ -1,6 +1,6 @@
 .character-grid-container {
   max-width: 80%;
-  margin: auto;
+  margin: auto auto 3rem;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
 
@@ -12,7 +12,8 @@
     border-radius: 0.5rem;
     overflow: hidden;
     width: 100%;
-    height: 100px;
+    height: 15rem; // Bug
+
     &:hover {
       z-index: 1;
       box-shadow: $special-glow;
@@ -41,7 +42,7 @@
       img {
         object-fit: cover;
         width: 100%;
-        height: 100%;
+        //height: 100%;
       }
     }
 

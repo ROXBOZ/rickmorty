@@ -1,21 +1,15 @@
 import React from "react";
 import { Button, ButtonGroup } from "@mui/material";
 
-const PagesBanner = () => {
-  function handlePrev() {
-    console.log("handlePrev");
-  }
-  function handleNext() {
-    console.log("handlenext");
-  }
+const Pagination = () => {
   return (
     <div className="pagination-banner">
       <ButtonGroup variant="contained" color="secondary">
-        <Button onClick={handlePrev}>Prev</Button>
-        <Button onClick={handleNext}>Next</Button>
+        <Button onClick={prevPage}>Prev</Button>
+        <Button onClick={nextPage}>Next</Button>
       </ButtonGroup>
     </div>
   );
 };
 
-export default PagesBanner;
+export default Pagination;

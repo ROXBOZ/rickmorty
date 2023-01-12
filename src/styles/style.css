@@ -2,15 +2,15 @@
   max-width: 80%;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
 }
 .character-grid-container .flip-card {
   background-color: transparent;
-  height: 200px;
   perspective: 1000px;
   border-radius: 0.5rem;
   overflow: hidden;
+  height: 16em;
 }
 .character-grid-container .flip-card:hover {
   z-index: 1;
@@ -36,10 +36,6 @@
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
-.character-grid-container .flip-card .flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
 .character-grid-container .flip-card .flip-card-front img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -56,6 +52,26 @@
   transform: rotateY(180deg);
 }
 
+@media only screen and (min-width: 600px) {
+  .character-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .character-grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (min-width: 992px) {
+  .character-grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .character-grid-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
 .modal-box {
   position: absolute;
   top: 50%;
@@ -93,7 +109,7 @@
   justify-items: center;
 }
 .navbar .navbar-logo {
-  width: 15%;
+  width: 25vw;
   margin: auto;
   text-align: center;
   cursor: pointer;
@@ -107,11 +123,22 @@
   margin-left: 0.5rem;
 }
 
+.pagination-banner,
 .footer {
-  margin-top: 3rem;
+  padding-bottom: 1rem;
   display: flex;
   justify-content: center;
-  background-color: #bdffa6;
+  background-color: white;
+}
+.pagination-banner .footer-github-line,
+.footer .footer-github-line {
+  display: flex;
+  flex-direction: row;
+}
+
+.pagination-banner {
+  margin-top: 3rem;
+  padding-top: 1rem;
 }
 
 html {
@@ -119,4 +146,14 @@ html {
 }
 html body {
   margin: 0;
+}
+html body a {
+  text-decoration: none;
+  color: #8e24aa;
+}
+html body a .devicon-github-original {
+  font-size: 150%;
+}
+html body a:hover {
+  color: #7b1fa2;
 }/*# sourceMappingURL=style.css.map */

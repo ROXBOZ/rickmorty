@@ -3,9 +3,20 @@
 @import "simple-modal";
 @import "navbar";
 @import "footer";
+
 html {
   background-color: $main;
   body {
     margin: 0;
+    a {
+      text-decoration: none;
+      color: #8e24aa;
+      .devicon-github-original {
+        font-size: 150%;
+      }
+      &:hover {
+        color: #7b1fa2;
+      }
+    }
   }
 }

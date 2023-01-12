@@ -10,7 +10,7 @@ const SimpleModal = ({ data, d }) => {
   const handleClose = () => setOpen(false);
 
   return (
-    <React.Fragment>
+    <>
       <Button color="secondary" variant="contained" onClick={handleOpen}>
         More Info
       </Button>
@@ -27,7 +27,7 @@ const SimpleModal = ({ data, d }) => {
           <Typography align="center">Status: {data.status}</Typography>
         </Box>
       </Modal>
-    </React.Fragment>
+    </>
   );
 };
 

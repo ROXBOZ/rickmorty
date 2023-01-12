@@ -1,6 +1,6 @@
 import NavBar from "./components/NavBar";
 import GridCharacters from "./components/GridCharacters";
-import Pagination from "./components/Pagination";
+import PagesBanner from "./components/PagesBanner";
 import Footer from "./components/Footer";
 import { useState, useEffect } from "react";
 
@@ -30,7 +30,7 @@ function App() {
     <div className="App">
       <NavBar data={data} setFilter={setFilter} />
       <GridCharacters data={data} filter={filter} />
-      <Pagination data={data} />
+      <PagesBanner />
       <Footer />
     </div>
   );

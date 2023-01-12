@@ -1,6 +1,16 @@
+.pagination-banner,
 .footer {
-  margin-top: 3rem;
+  padding-bottom: 1rem;
   display: flex;
   justify-content: center;
-  background-color: $secondary;
+  background-color: white;
+  .footer-github-line {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.pagination-banner {
+  margin-top: 3rem;
+  padding-top: 1rem;
 }

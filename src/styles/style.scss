@@ -8,6 +8,10 @@ html {
   background-color: $main;
   body {
     margin: 0;
+    // for footer to stick to the bottom
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     a {
       text-decoration: none;
       color: #8e24aa;

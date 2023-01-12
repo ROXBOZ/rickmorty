@@ -30,7 +30,6 @@ function App() {
     <div className="App">
       <NavBar data={data} setFilter={setFilter} />
       <GridCharacters data={data} filter={filter} />
-      <PagesBanner />
       <Footer />
     </div>
   );

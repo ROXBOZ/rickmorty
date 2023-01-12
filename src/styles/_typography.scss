@@ -1,0 +1,10 @@
+a {
+  text-decoration: none;
+  color: #8e24aa;
+  .devicon-github-original {
+    font-size: 150%;
+  }
+  &:hover {
+    color: #7b1fa2;
+  }
+}

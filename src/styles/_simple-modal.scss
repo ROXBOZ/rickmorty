@@ -11,6 +11,13 @@
   align-content: center;
   flex-direction: column;
   box-shadow: $special-glow;
+
+  .modal-box-img {
+    max-width: 70%;
+    margin: 0 auto 1rem;
+    border-radius: 0.5rem;
+  }
+
   .modal-box-closebutton {
     top: 1rem;
     right: 1rem;
@@ -19,11 +26,5 @@
     &:hover {
       opacity: 80%;
     }
-  }
-
-  .modal-box-img {
-    max-width: 70%;
-    margin: 0 auto 1rem;
-    border-radius: 0.5rem;
   }
 }

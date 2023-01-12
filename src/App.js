@@ -1,6 +1,5 @@
 import NavBar from "./components/NavBar";
 import GridCharacters from "./components/GridCharacters";
-import PagesBanner from "./components/PagesBanner";
 import Footer from "./components/Footer";
 import { useState, useEffect } from "react";
 

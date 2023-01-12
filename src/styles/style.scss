@@ -3,24 +3,14 @@
 @import "simple-modal";
 @import "navbar";
 @import "footer";
+@import "typography";
 
 html {
-  background-color: $main;
+  background-color: $primary;
   body {
     margin: 0;
-    // for footer to stick to the bottom
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    a {
-      text-decoration: none;
-      color: #8e24aa;
-      .devicon-github-original {
-        font-size: 150%;
-      }
-      &:hover {
-        color: #7b1fa2;
-      }
-    }
   }
 }

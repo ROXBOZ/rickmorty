@@ -7,18 +7,19 @@ function App() {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(null);
   const [error, setError] = useState(null);
-  const [page, setPage] = useState(2);
+  const [page, setPage] = useState(1);
+
   const nextPage = () => {
     setPage(page + 1);
-    if (page > 42) {
-      console.log("page 43 doesn't exist");
+    if (page >= 42) {
+      window.location.reload(true);
     }
   };
 
   const prevPage = () => {
     setPage(page - 1);
-    if (page - 1 < 1) {
-      console.log("-1 does not exist");
+    if (page <= 1) {
+      window.location.reload(true);
     }
   };
 
@@ -40,12 +41,9 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={prevPage}>prev</button>
-      <button onClick={nextPage}>next</button>
-
       <NavBar data={data} setFilter={setFilter} />
       <GridCharacters data={data} filter={filter} />
-      <Footer />
+      <Footer page={page} nextPage={nextPage} prevPage={prevPage} />
     </div>
   );
 }

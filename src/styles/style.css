@@ -91,7 +91,6 @@
   display: flex;
   flex-direction: column;
   justify-items: center;
-  background-color: #092843;
 }
 .navbar .navbar-logo {
   width: 15%;

@@ -1,29 +1,37 @@
 import NavBar from "./components/NavBar";
 import GridCharacters from "./components/GridCharacters";
-import { useState } from "react";
-import { useEffect } from "react";
+import Pagination from "./components/Pagination";
+import Footer from "./components/Footer";
+import { useState, useEffect } from "react";
 
 function App() {
-  // fetch data
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(null);
+  const [error, setError] = useState(null);
+  let page = 1;
+
   useEffect(() => {
-    fetch("https://rickandmortyapi.com/api/character/")
-      .then((response) => {
-        return response.json();
-      })
-      .then((result) => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          `https://rickandmortyapi.com/api/character/?page=${page}`
+        );
+        const result = await response.json();
         setData(result.results);
-      })
-      .catch((error) => {
-        console.log("error: ", error);
-      });
+      } catch (error) {
+        console.log("Catch: ", error);
+        setError(error);
+      }
+    };
+    fetchData();
   }, []);
 
   return (
     <div className="App">
       <NavBar data={data} setFilter={setFilter} />
       <GridCharacters data={data} filter={filter} />
+      <Pagination data={data} />
+      <Footer />
     </div>
   );
 }

@@ -12,7 +12,7 @@ const GridCharacters = ({ data, filter }) => {
       {data &&
         filter &&
         filter.map((d) => {
-          return <FlipCard d={d} />;
+          return <FlipCard key={d.id} d={d} />;
         })}
     </div>
   );

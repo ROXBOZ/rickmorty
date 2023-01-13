@@ -5,6 +5,12 @@
 @import "footer";
 @import "typography";
 
+* {
+  &:focus {
+    border: $border-focus;
+  }
+}
+
 html {
   background-color: $primary;
   body {

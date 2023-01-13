@@ -9,6 +9,10 @@
     margin: auto;
     text-align: center;
     cursor: pointer;
+    &:focus {
+      background-color: red;
+      border: $border-focus;
+    }
   }
   .search-bar {
     display: flex;

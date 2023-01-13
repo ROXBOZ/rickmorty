@@ -113,6 +113,10 @@
   text-align: center;
   cursor: pointer;
 }
+.navbar .navbar-logo:focus {
+  background-color: red;
+  border: 1px dotted white;
+}
 .navbar .search-bar {
   display: flex;
   margin: 1rem auto;
@@ -149,6 +153,10 @@ a .devicon-github-original {
 }
 a:hover {
   color: #7b1fa2;
+}
+
+*:focus {
+  border: 1px dotted white;
 }
 
 html {

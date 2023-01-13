@@ -5,13 +5,13 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [data, setData] = useState([]);
-  const [filter, setFilter] = useState(null);
+  const [filterTerm, setFilterTerm] = useState(null);
   const [, setError] = useState(null);
   const [page, setPage] = useState(1);
 
   const nextPage = () => {
     setPage(page + 1);
-    if (page >= 42) {
+    if (page == 5) {
       window.location.reload(true);
     }
   };
@@ -21,6 +21,11 @@ function App() {
     if (page <= 1) {
       window.location.reload(true);
     }
+  };
+
+  const getInput = (text) => {
+    console.log("text", text);
+    setFilterTerm(text);
   };
 
   useEffect(() => {
@@ -41,8 +46,8 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar data={data} setFilter={setFilter} />
-      <GridCharacters data={data} filter={filter} />
+      <NavBar getInput={getInput} />
+      <GridCharacters data={data} filterTerm={filterTerm} />
       <Footer page={page} nextPage={nextPage} prevPage={prevPage} />
     </div>
   );

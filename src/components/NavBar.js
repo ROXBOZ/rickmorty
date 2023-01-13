@@ -1,8 +1,8 @@
+import { Typography } from "@mui/material";
 import * as React from "react";
 import logo from "../assets/logo.png";
-import Search from "./Search";
 
-const NavBar = ({ data, filter, setFilter }) => {
+const NavBar = ({ data, filter, setFilter, getInput }) => {
   function resetFilter() {
     window.location.reload(true);
   }
@@ -15,7 +15,16 @@ const NavBar = ({ data, filter, setFilter }) => {
         src={logo}
         alt="logo Rick and Morty"
       />
-      <Search data={data} setFilter={setFilter} />
+      <div className="search-bar">
+        <Typography>Search: </Typography>
+        <input
+          onChange={(e) => {
+            getInput(e.target.value);
+          }}
+          type="text"
+          placeholder="Rick..."
+        />
+      </div>
     </div>
   );
 };

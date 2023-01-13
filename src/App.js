@@ -42,7 +42,13 @@ function App() {
   return (
     <div className="App">
       <NavBar data={data} setFilter={setFilter} />
-      <GridCharacters data={data} filter={filter} />
+      <GridCharacters
+        page={page}
+        nextPage={nextPage}
+        prevPage={prevPage}
+        data={data}
+        filter={filter}
+      />
       <Footer page={page} nextPage={nextPage} prevPage={prevPage} />
     </div>
   );

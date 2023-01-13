@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Typography } from "@mui/material";
 
 const Search = ({ data, setFilter }) => {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [, setSearchTerm] = useState("");
 
   function handleChange(e) {
     setSearchTerm(e.target.value); // const setFilter = search bar query

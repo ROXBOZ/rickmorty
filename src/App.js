@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 function App() {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(null);
-  const [error, setError] = useState(null);
+  const [, setError] = useState(null);
   const [page, setPage] = useState(1);
 
   const nextPage = () => {

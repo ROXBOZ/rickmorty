@@ -11,7 +11,7 @@ function App() {
 
   const nextPage = () => {
     setPage(page + 1);
-    if (page == 5) {
+    if (page === 5) {
       window.location.reload(true);
     }
   };

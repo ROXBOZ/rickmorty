@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { Button, ButtonGroup } from "@mui/material";
 
 const Pagination = (props) => {
